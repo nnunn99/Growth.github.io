@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gremarks</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://picsum.photos/2000/1000');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Categories styles */
+        .categories {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: moveLeftToRight 20s linear infinite;
+        }
+        .category {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            cursor: pointer;
+            background-color: #000;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+        .category:hover {
+            background-color: #555;
+        }
+
+        @keyframes moveLeftToRight {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-100% + 100vw));
+            }
+        }
+
+        /* Products styles */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            flex-basis: calc(20% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+        .product:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        .product img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
+        }
+        .product h3 {
+            margin-top: 0;
+        }
+        .product p {
+            margin-bottom: 10px;
+        }
+
+        /* Search bar styles */
+        .search-bar {
+            margin: 20px auto;
+            padding: 10px 20px;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        .search-bar button {
+            width: 20%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #555;
+        }
+
+        /* Utility classes for colors */
+        .blue { color: #3498db; }
+        .grey { color: #7f8c8d; }
+        .orange { color: #e67e22; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Growth</h1>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar productos...">
+        <button>Buscar</button>
+    </div>
+    <div class="categories">
+        <div class="category">Electrónica</div>
+        <div class="category">Moda y Accesorios</div>
+        <div class="category">Hogar y Jardín</div>
+        <div class="category">Salud y Belleza</div>
+        <div class="category">Deportes</div>
+        <div class="category">Mascotas</div>
+        <div class="category">Libros y Música</div>
+        <div class="category">Bebés</div>
+        <div class="category">Coches y motos</div>
+        <div class="category">Electrodomésticos</div>
+    </div>
+    <div class="products">
+        <!-- Producto 1 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product">
+            <h3 class="blue">Producto 1</h3>
+            <p class="orange">S/250.00</p>
+            <p class="grey">xd.</p>
+        </div>
+        <!-- Producto 2 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product">
+            <h3 class="blue">Producto 2</h3>
+            <p class="orange">S/150.00</p>
+            <p class="grey">xd.</p>
+        </div>
+        <!-- Producto 3 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product">
+            <h3 class="blue">Producto 3</h3>
+            <p class="orange">S/300.00</p>
+            <p class="grey">xd.</p>
+        </div>
+        <!-- Producto 4 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Product">
+            <h3 class="blue">Producto 4</h3>
+            <p class="orange">S/200.00</p>
+            <p class="grey">xd.</p>
+            </div>
+        <!-- Producto 5 -->
+        <div class="product">
+           <img src="https://via.placeholder.com/150" alt="Product">
+           <h3 class="blue">Producto 5</h3>
+           <p class="orange">S/180.00</p>
+           <p class="grey">xd.</p>
+           </div>
+        <!-- Agrega más productos aquí -->
+        <div class="product">
+           <img src="https://via.placeholder.com/150" alt="Product">
+           <h3 class="blue">Producto 1</h3>
+           <p class="orange">S/250.00</p>
+           <p class="grey">xd.</p>
+           </div>
+       <!-- Producto 2 -->
+        <div class="product">
+           <img src="https://via.placeholder.com/150" alt="Product">
+           <h3 class="blue">Producto 2</h3>
+           <p class="orange">S/150.00</p>
+           <p class="grey">xd.</p>
+           </div>
+       <!-- Producto 3 -->
+       <div class="product">
+           <img src="https://via.placeholder.com/150" alt="Product">
+           <h3 class="blue">Producto 3</h3>
+           <p class="orange">S/300.00</p>
+           <p class="grey">xd.</p>
+           </div>
+       <!-- Producto 4 -->
+       <div class="product">
+           <img src="https://via.placeholder.com/150" alt="Product">
+           <h3 class="blue">Producto 4</h3>
+           <p class="orange">S/200.00</p>
+           <p class="grey">xd.</p>
+           </div>
+       <!-- Producto 5 -->
+       <div class="product">
+           <img src="https://photos.google.com/photo/AF1QipM0nkCK057Fy9WZ9Nc4M2Up08UeHuxXMQzf-AiR" alt="Product">
+           <h3 class="blue">Producto 5</h3>
+           <p class="orange">S/180.00</p>
+           <p class="grey">xd.</p>
+           </div>
+       <!-- Agrega más productos aquí -->
+        </div>
+    </body>
+    </html>
+    
